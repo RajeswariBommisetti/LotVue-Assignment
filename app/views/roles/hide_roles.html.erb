@@ -1,0 +1,11 @@
+
+<%= form_for(Role.new, url: update_roles_roles_path )do |f| %>
+<% Role.all.each do |a| %>
+    <%= f.label :name, a.name%>
+    <%= f.check_box(:name, { :multiple => true, checked: !a.active }, a.id, false)%>
+
+
+
+<% end %>
+<%= f.submit "update", class: "btn btn-primary" %>
+<% end %>

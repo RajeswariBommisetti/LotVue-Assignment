@@ -1,0 +1,11 @@
+<head>
+  <script type="text/javascript">
+
+  </script>
+</head>
+<h2>User Role App</h2>
+<%= link_to '<button type="button">Create Roles</button>'.html_safe, new_role_path %>
+<%= link_to '<button type="button">Create User</button>'.html_safe, new_user_path %>
+<%= link_to 'show users', show_users_users_path, id: 'button', method: :get, remote: true %>
+<%= link_to '<button type="button">Hide roles</button>'.html_safe, hide_roles_roles_path, :method => :post %>
+<div id="show_users"></div>

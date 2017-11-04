@@ -1,0 +1,17 @@
+
+<table class="table table-bordered" id="roles_list"data-sort-name="name" data-sort-order="desc" style="width: 60%;">
+  <thead>
+    <tr>
+      <th data-field="name" data-sortable="true">Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roles.each do |role| %>
+      <tr>
+        <td ><%= role.name %></td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>
+

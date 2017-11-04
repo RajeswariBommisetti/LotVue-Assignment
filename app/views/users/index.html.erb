@@ -1,0 +1,23 @@
+<%= will_paginate @users %>
+<table class="table table-bordered" id="users_list"data-sort-name="name" data-sort-order="desc" style="width: 60%;">
+  <thead>
+    <tr>
+      <th data-field="name" data-sortable="true">Name</th>
+      <th data-field="email" data-sortable="true">Email</th>
+      <th data-field="roles" data-sortable="true">Roles</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td ><%= user.firstname %> <%= user.lastname %></td>
+        
+        <td><%= user.email  %> </td>
+        
+        <td> <%= user.roles.active.pluck(:name).join(",") %> </td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>
+<%= will_paginate @users %>
